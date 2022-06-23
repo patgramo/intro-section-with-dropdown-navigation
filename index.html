@@ -15,6 +15,8 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  
+  <script type="text/javascript" src="script.js"></script>
 
 </head>
 <body>
@@ -25,33 +27,51 @@
       </a>
 <!--Navigation-->
       <nav>
-        <div class="drop-down">
-          <img src="images/icon-menu.svg" alt="hamburger icon">
+        <!--Dropdown Menu-->
+        <div id="dropdown">
+          <img class="hamburger" src="images/icon-menu.svg" alt="hamburger icon" onclick="showDropdown()">
+          <div id ="dropdown-show" class="dropdown-content">
+            <!--Features-->
+            <div class="features-block">
+              <p>Features</p>
+              <img src="images/icon-arrow-down.svg" alt="arrow down" />
+            </div>
+            <div class="company-block">
+              <p>Company</p>
+              <img src="images/icon-arrow-down.svg" alt="arrow down" />
+            </div>
+            <p>Careers</p>
+            <p>About</p>
+            <div class="dropdown-buttons">
+              <button>Login</button>
+              <button>Register</button>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
+    <main>
+      <section class = "hero">
+          <img src = "images/image-hero-mobile.png" alt = "company-icon"> 
+      </section>
 
-    <section class = "hero">
-        <img src = "images/image-hero-mobile.png" alt = "company-icon"> 
-    </section>
-
-    <section class = "slogan">
-      <h1>Make remote work</h1>
-      <p>Get your team in sync, no matter your location. Streamline processes, 
-      create team rituals, and watch productivity soar.</p>
-      <button><strong>Learn more</strong></button>
-    </section>
-
-    <footer>
-      <img src="images/client-databiz.svg" alt="databiz" />
-      <img src="images/client-audiophile.svg" alt="audiophile" />
-      <img src="images/client-meet.svg" alt="meet" />
-      <img src="images/client-maker.svg" alt="maker" />
-    </footer>
-        <div class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-          Coded by <a href="#">Patrick Morrison</a>.
-        </div>
-  </div
+      <section class = "slogan">
+        <h1>Make remote work</h1>
+        <p>Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.</p>
+        <span class="button"><button>Learn more</button></span>
+        <footer>
+          <img src="images/client-databiz.svg" alt="databiz" />
+          <img src="images/client-audiophile.svg" alt="audiophile" />
+          <img src="images/client-meet.svg" alt="meet" />
+          <img src="images/client-maker.svg" alt="maker" />
+        </footer>
+      </section>
+    </main>  
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Patrick Morrison</a>.
+    </div>
+  </div>
 </body>
 </html>
