@@ -88,32 +88,31 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 999;
 }
 nav {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;  
+    z-index: 999;
 }
 .hamburger {
     cursor: pointer;
-    z-index: 11;
 }
 
 .dropdown {
-    display: flex;
-    position:absolute;
-    top:0;
-    right:0;
-    z-index: 1;
+    position: relative;
 }
 
 .dropdown-content {
     display: none;
     flex-flow: column wrap;
-    justify-content: left;
-    align-items: flex-start;
-    color: hsl(0, 0%, 41%);
+    position: absolute;
+    right: 50px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 .features-block {
     display: flex;
@@ -150,6 +149,10 @@ nav {
 
 .show {
     display: flex;
+}
+
+.main {
+    z-index: 1;
 }
 
 .hero {
@@ -215,6 +218,54 @@ footer img {
 @media (min-width: 1200px) {
     header {
         padding: 50px;
+    }
+    .hamburger {
+        display: none;
+    }
+    nav {
+        width: 87%;
+    }
+    #dropdown {
+        position: static;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    #dropdown-show {
+        position: static;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        background: none;
+        z-index: 0;
+        width: 100%;
+        box-shadow:none;
+    }
+    .dropdown-content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        position: static;
+    }
+    .features-block {
+        display: inline-block;
+        width:15%;
+        height: auto;
+    }
+    .features-block img {
+        width: 8%;
+    }
+    .features-block p {
+        width: 50%;
+        margin-right: 0;
+    }
+    .company-block {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        width: auto;
+        height: auto;
     }
     main {
         display: flex;
